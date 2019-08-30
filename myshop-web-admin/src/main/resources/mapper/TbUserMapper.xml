@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sen.myshop.web.admin.dao.TbUserDao">
+    <sql id="tbUserColumns">
+          a.id,
+          a.username,
+          a.password,
+          a.phone,
+          a.email,
+          a.created,
+          a.updated
+    </sql>
+
+    <select id="selectAll" resultType="Tbuser">
+        SELECT
+        <include refid="tbUserColumns"/>
+        FROM tb_user AS a ORDER BY a.updated DESC
+    </select>
+
+    <select id="getByEmail" resultType="TbUser">
+        SELECT
+        <include refid="tbUserColumns" />
+        FROM
+        tb_user AS a
+        WHERE
+        a.email = #{email}
+    </select>
+
+    <insert id="insert">
+        INSERT INTO
+        tb_user (username,password,phone,email,created,updated)
+        values (#{username},#{password},#{phone},#{email},#{created},#{updated});
+    </insert>
+
+    <update id="update">
+    update tb_user set
+    username=#{username},
+    password=#{password},
+    phone=#{phone},
+    email=#{email},
+    updated=#{updated}
+    where id = #{id}
+    </update>
+
+    <select id="getById" resultType="TbUser">
+        select
+        <include refid="tbUserColumns"/>
+        from tb_user as a where a.id=#{id};
+    </select>
+
+    <delete id="deleteMutil">
+        delete from tb_user
+        where id in
+        <foreach collection="array" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="findByPage" resultType="TbUser" parameterType="java.util.Map">
+        select
+        <include refid="tbUserColumns"/>
+        from tb_user as a
+        <where>
+            <if test="pageParam.username != null and pageParam.username != ''">
+                and a.username like concat('%',#{pageParam.username},'%')
+            </if>
+            <if test="pageParam.phone != null and pageParam.phone != ''">
+                and a.phone like concat('%',#{pageParam.phone},'%')
+            </if>
+            <if test="pageParam.email != null and pageParam.email != ''">
+                and a.email like concat('%',#{pageParam.email},'%')
+            </if>
+        </where>
+        limit #{start},#{length}
+    </select>
+
+    <select id="totalcount" resultType="java.lang.Integer">
+        select count(*) from tb_user as a
+        <where>
+            <if test="username != null and username != ''">
+                and a.username like concat('%',#{username},'%')
+            </if>
+            <if test="phone != null and phone != ''">
+                and a.phone like concat('%',#{phone},'%')
+            </if>
+            <if test="email != null and email != ''">
+                and a.email like concat('%',#{email},'%')
+            </if>
+        </where>
+    </select>
+
+    <delete id="delete">
+        DELETE FROM tb_user WHERE id = #{id}
+    </delete>
+</mapper>

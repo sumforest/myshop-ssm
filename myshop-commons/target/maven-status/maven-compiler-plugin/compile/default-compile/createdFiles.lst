@@ -1,0 +1,15 @@
+com\sen\myshop\commons\persistence\BaseEntity.class
+com\sen\myshop\commons\validator\BeanValidator.class
+com\sen\myshop\commons\persistence\BaseTreeDao.class
+com\sen\myshop\commons\utils\RegexpUtils.class
+com\sen\myshop\commons\persistence\BaseTreeEntity.class
+com\sen\myshop\commons\persistence\BaseService.class
+com\sen\myshop\commons\utils\HttpClientUtils.class
+com\sen\myshop\commons\persistence\BaseDao.class
+com\sen\myshop\commons\dto\BaseResult.class
+com\sen\myshop\commons\utils\MapperUtils$1.class
+com\sen\myshop\commons\constant\ConstantUtils.class
+com\sen\myshop\commons\persistence\BaserTreeService.class
+com\sen\myshop\commons\utils\EmailSendUtils.class
+com\sen\myshop\commons\utils\MapperUtils.class
+com\sen\myshop\commons\dto\PageInfo.class

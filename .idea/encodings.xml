@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/myshop-commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myshop-dependencies" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myshop-domain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myshop-external" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myshop-web-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myshop-web-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myshop-web-ui" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

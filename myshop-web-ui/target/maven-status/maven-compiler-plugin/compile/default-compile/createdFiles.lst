@@ -1,0 +1,11 @@
+com\sen\myshop\web\ui\api\UserApi.class
+com\sen\myshop\web\ui\interceptor\LoginInterceptor.class
+com\sen\myshop\web\ui\controller\IndexController.class
+com\sen\myshop\web\ui\controller\KaptchaController.class
+com\sen\myshop\web\ui\api\ConstantApi.class
+com\sen\myshop\web\ui\dto\Content.class
+com\sen\myshop\web\ui\constant\SystemConstant.class
+com\sen\myshop\web\ui\controller\LoginController.class
+com\sen\myshop\web\ui\controller\RegisterController.class
+com\sen\myshop\web\ui\api\Api.class
+com\sen\myshop\web\ui\dto\TbUser.class
