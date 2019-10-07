@@ -1,2 +1,3 @@
 # my-project
-练习代码
+SSM(Spring + Sprimg MVC + Mybatis)
+Maven分模块开发
