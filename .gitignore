@@ -2,6 +2,7 @@
 *.class
 
 # Idea / Eclipse
+.idea
 *.iml
 *.project
 # Log file
